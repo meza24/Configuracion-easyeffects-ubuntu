@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+
+\title{Guía de Instalación y Configuración de EasyEffects para Filtros de Audio en Ubuntu}
+\author{Usuario}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Esta documentación describe el proceso de instalación y configuración de EasyEffects para aplicar filtros de audio al micrófono en Ubuntu, específicamente para reducción de ruido y mejora de voz.
+
+\section{Requisitos del Sistema}
+\begin{itemize}
+    \item Sistema Operativo: Ubuntu (versiones 20.04 o superiores)
+    \item Terminal de comandos
+    \item Permisos de administrador (sudo)
+\end{itemize}
+
+\section{Proceso de Instalación}
+
+\subsection{Paso 1: Actualizar lista de paquetes}
+\begin{verbatim}
+sudo apt update
+\end{verbatim}
+
+\subsection{Paso 2: Instalar EasyEffects}
+\begin{verbatim}
+sudo apt install easyeffects
+\end{verbatim}
+
+\subsection{Paso 3: Instalar complementos LSP (recomendado)}
+\begin{verbatim}
+sudo apt install lsp-plugins
+\end{verbatim}
+
+\section{Configuración}
+
+\subsection{Paso 4: Iniciar EasyEffects}
+\begin{verbatim}
+easyeffects
+\end{verbatim}
+
+\subsection{Paso 5: Configurar dispositivo de entrada}
+\begin{itemize}
+    \item Abrir la pestaña \textbf{Input}
+    \item Seleccionar el micrófono en \textbf{Dispositivo de Entrada}
+\end{itemize}
+
+\subsection{Paso 6: Aplicar filtros de audio}
+\begin{itemize}
+    \item Clic en \textbf{Add Effects}
+    \item Seleccionar \texttt{Noise Reduction}
+    \item Seleccionar \texttt{Speech Processor}
+\end{itemize}
+
+\section{Ajustes Recomendados}
+
+\subsection{Noise Reduction}
+\begin{itemize}
+    \item Activado (interruptor en posición ON)
+    \item Función: Elimina ruido de fondo automáticamente
+\end{itemize}
+
+\subsection{Speech Processor}
+\begin{itemize}
+    \item \texttt{Gate Threshold}: Elimina ruido cuando no se habla
+    \item \texttt{Compression}: Normaliza el volumen de la voz
+    \item Los ajustes automáticos suelen ser efectivos
+\end{itemize}
+
+\section{Verificación}
+\begin{itemize}
+    \item Probar el micrófono hablando normalmente
+    \item Verificar reducción de ruido ambiental
+    \item Ajustar parámetros según necesidad
+\end{itemize}
+
+\section{Notas Técnicas}
+\begin{itemize}
+    \item EasyEffects funciona a nivel de sistema
+    \param{Compatible con todas las aplicaciones}
+    \item Requiere reinicio después de la instalación
+    \item Consume recursos adicionales del sistema
+\end{itemize}
+
+\end{document}
